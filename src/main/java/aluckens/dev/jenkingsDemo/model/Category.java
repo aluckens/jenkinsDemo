@@ -19,6 +19,13 @@ public class Category {
     this.createdOn = LocalDateTime.now();
     this.createdBy = "Admin";
   }
+  public Category(Integer id , String name, Type type) {
+    this.id = id;
+    this.name = name;
+    this.type = type;
+    this.createdOn = LocalDateTime.now();
+    this.createdBy = "Admin";
+  }
 
   public String getName() {
     return name;

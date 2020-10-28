@@ -3,14 +3,17 @@ package aluckens.dev.jenkingsDemo.model;
 import aluckens.dev.jenkingsDemo.model.enumeration.Type;
 
 import java.time.LocalDateTime;
+import java.util.Random;
 
 public class Category {
+  private Integer id;
   private String name;
   private Type type;
   private LocalDateTime createdOn;
   private String createdBy;
 
   public Category(String name, Type type) {
+    this.id = new Random().nextInt();
     this.name = name;
     this.type = type;
     this.createdOn = LocalDateTime.now();
@@ -48,4 +51,12 @@ public class Category {
   public void setCreatedBy(String createdBy) {
     this.createdBy = createdBy;
   }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }
